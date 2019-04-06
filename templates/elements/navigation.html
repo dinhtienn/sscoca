@@ -1,0 +1,48 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-main fixed-top">
+    <div>
+        <a class="navbar-brand font-logo text-light bg-zoom glow ml-3" style="font-size: 300%; font-weight: bold" href="{{ url_for('index') }}">
+            <i class="fas fa-cocktail"></i>
+            SSCoCa
+        </a>
+    </div>
+    <div class="collapse navbar-collapse justify-content-start ml-1" id="navbarNav">
+        <ul class="navbar-nav pt-2">
+            <li class="nav-item">
+                <a onclick="myFunction()" class="nav-link text-warning font-text mx-1 zoom" style="font-size: 110%; font-weight: bold" href="#">Giới thiệu</a>
+                <div id="snackbar">
+                    SSCoCa v1.1 - 14/11/2018
+                    <hr>
+                    Giúp bạn tải về những đoạn Video/những bản Audio phục vụ công việc Dựng/Chỉnh Sửa Phim ảnh hoặc đơn giản chỉ là thưởng thức và lưu trữ
+                    <hr>
+                    Web này mình viết để tặng cho Coca Mommy
+                    <i class="fas fa-star"></i>
+                    đỡ vất vả mỗi lần dựng Clip
+                    <hr>
+                    From 
+                    <a class="font-text text-info" style="font-weight: bold" href="{{ url_for('daddy') }}">Daddy</a>
+                     with Love
+                    <i class="fas fa-heart"></i>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a onclick="myFunction1()" class="nav-link text-warning font-text mx-1 zoom" style="font-size: 110%; font-weight: bold" href="#">Hướng dẫn</a>
+                <div id="snackbar1">
+                    Nhập vào Link Video bạn cần trên Youtube, kiểm tra các thông tin cơ bản và chọn tải xuống Video/Audio bạn mong muốn
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-warning font-text mx-1 zoom" style="font-size: 110%; font-weight: bold" href="{{ url_for('feedback') }}">Phản hồi</a>
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse justify-content-end mr-2" id="navbarNav">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a role="button" class="btn btn-outline-danger font-text zoom" style="font-size: 120%; font-weight: bold" href="https://www.youtube.com/" target="#">
+                    <i class="fab fa-youtube-square mr-1"></i>
+                    Youtube
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

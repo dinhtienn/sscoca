@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SSCoCa</title>
+    {% include 'elements/meta-data.html' %}
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-between bg-image h-850px" style="padding-top: 150px">
+        {% include 'elements/navigation.html' %}
+        <div>
+            <h1 class="text-light font-logo text-center glow" style="font-size: 500%; margin-bottom: 60px">
+                Hello Daddy
+                <i class="fas fa-user-secret"></i>
+            </h1>
+            {% if template == 0 %}
+                <div class="border border-dark rounded bg-main container text-center font-text text-warning mb-5" style="font-size: 180%; width: 50%;">
+                    Sai Tên tài khoản hoặc Mật khẩu! Hãy nhập lại!
+                </div>
+            {% endif %}
+            <div class="border border-dark rounded bg-main container text-center font-text py-4" style="width: 30%">
+                <h3 class="text-light font-logo text-center glow mb-4" style="font-size: 200%">
+                    Administrator's
+                    <i class="fas fa-cocktail"></i>
+                    SSCoCa
+                </h3>
+                <form method='POST'>
+                    <div class="form-group d-flex">
+                        <label for="inputUsername" class="col-md-5 col-form-label font-weight-bold text-light" style="font-weight: bold; font-size: 120%">Tên tài khoản</label>
+                        <div class="col-md-7">
+                            <input type="text" name = "username" class="form-control" id="inputUsername" placeholder="Tên tài khoản">
+                        </div>
+                    </div>
+                    <div class="form-group d-flex">
+                        <label for="inputPassword" class="col-md-5 col-form-label font-weight-bold text-light" style="font-weight: bold; font-size: 120%">Mật khẩu</label>
+                        <div class="col-md-7">
+                            <input type="password" name = "password" class="form-control" id="inputPassword" placeholder="Mật khẩu">
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-around mt-5" style="font-weight: bold">
+                        <button type="submit" class="btn btn-outline-warning col-md-4 zoom" style="font-weight: bold">
+                            <i class="fas fa-sign-in-alt"></i>
+                            Đăng Nhập
+                        </button>
+                        <a role="button" class="btn btn-outline-danger col-md-3 zoom" style="font-weight: bold" href="{{ url_for('index') }}">
+                            <i class="fas fa-arrow-circle-left"></i>
+                            Trở về
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+        {% include 'elements/copyright.html' %}
+    </div>
+    <script>
+        function myFunction() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar");
+            // Add the "show" class to DIV
+            x.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+        function myFunction1() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar1");
+            // Add the "show" class to DIV
+            x.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SSCoCa</title>
+    {% include 'elements/meta-data.html' %}
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-between bg-image h-850px" style="padding-top: 150px">
+        {% include 'elements/navigation.html' %}
+        <div class="border border-dark rounded bg-main container text-center font-text py-4" style="width: 45%">
+            <form method='POST'>
+                <h3 class="text-info" style="font-weight: bold">Cảm ơn bạn đã phản hồi!!</h3>
+                <h5 class="text-info" style="font-weight: bold">
+                    Hy vọng bạn có được trải nghiệm tốt nhất với 
+                    <a class="navbar-brand font-logo text-light glow ml-2" style="font-size: 130%; font-weight: bold" href="{{ url_for('index') }}">
+                        <i class="fas fa-cocktail"></i>
+                        SSCoCa
+                    </a>
+                </h5>
+                <textarea class="border rounded container my-2" name="content" cols="70" rows="3" placeholder="Nội dung" style="font-weight: bold" required></textarea>
+                <div class="d-flex justify-content-around mt-1" style="font-weight: bold">
+                    <button type="submit" class="btn btn-outline-warning col-md-3 zoom" style="font-weight: bold">
+                        <i class="fas fa-comments"></i>
+                        Gửi
+                    </button>
+                    <a role="button" class="btn btn-outline-danger col-md-3 zoom" style="font-weight: bold" href="{{ url_for('index') }}">
+                        <i class="fas fa-arrow-circle-left"></i>
+                        Trở về
+                    </a>
+                </div>
+            </form>
+        </div>
+        {% include 'elements/copyright.html' %}
+    </div>
+    <script>
+        function myFunction() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar");
+            // Add the "show" class to DIV
+            x.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+        function myFunction1() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar1");
+            // Add the "show" class to DIV
+            x.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+</html>

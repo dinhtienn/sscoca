@@ -1,0 +1,106 @@
+.font-logo {
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.font-text {
+    font-family: 'KoHo', sans-serif;
+}
+
+.bg-image {
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+}
+
+.h-850px {
+    height: 850px;
+}
+
+.bg-main {
+    background-color: rgba(45, 52, 60, 0.3);
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    transform: scale(1.2);
+}
+
+.bg-zoom {
+    transition: transform .2s;
+}
+
+.bg-zoom:hover {
+    transform: scale(1.1);
+}
+
+tbody {
+    width: 100%;
+    height: 250px;
+    overflow: auto;
+}
+
+.glow {
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+@keyframes glow {
+    from {
+      text-shadow: 0 0 10px #5DBCD2, 0 0 20px #5DBCD2, 0 0 30px rgb(13, 211, 255), 0 0 40px rgb(13, 211, 255), 0 0 50px rgb(13, 211, 255), 0 0 60px rgb(13, 211, 255), 0 0 70px rgb(13, 211, 255);
+    }
+    to {
+      text-shadow: 0 0 20px #5DBCD2, 0 0 30px rgb(46, 147, 170), 0 0 40px rgb(46, 147, 170), 0 0 50px rgb(46, 147, 170), 0 0 60px rgb(46, 147, 170), 0 0 70px rgb(46, 147, 170), 0 0 80px rgb(46, 147, 170);
+    }
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #5DBCD2; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 10px; /* Rounded borders */
+    padding: 10px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    left: 20%; /* Center the snackbar */
+    bottom: 30px; /* 50px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible;
+    animation: fadeIn 1s, fadeOut 1s 10s;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar1 {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #5DBCD2; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 10px; /* Rounded borders */
+    padding: 10px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    left: 27%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+#snackbar1.show {
+    visibility: visible;
+   animation: fadeIn 1s, fadeOut 1s 5s;
+}
+
+@keyframes fadeIn {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadeOut {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}

@@ -1,0 +1,37 @@
+<div class="border border-dark rounded bg-main container d-flex flex-column py-4 mt-5" style="width: 50%">
+    <div class="d-flex justify-content-around">
+        <div class="col-md-6">
+            <iframe
+                width="300" 
+                height="169" 
+                src="https://www.youtube.com/embed/{{ video.youtube_id }}" 
+                frameborder="0" 
+                allow="autoplay; encrypted-media" 
+                allowfullscreen
+                >
+            </iframe>
+        </div>
+        <div class="font-text col-md-5">
+            <p class="text-info" style="font-size: 120%; font-weight: bold">Tiêu Đề: {{ video.title }}</p>
+            <p class="text-warning">Lượt Xem: {{ video.views }}</p>
+            <p class="text-warning">Lượt Like: {{ video.likes }}</p>
+            <p class="text-warning">Lượt Dislike: {{ video.dislikes }}</p>
+        </div>
+    </div>
+    <div class="font-text d-flex justify-content-around mt-4">
+        <a role="button" class="btn btn-outline-danger zoom" style="font-weight: bold" href="{{ video.link }}" target="#">
+            <i class="fab fa-youtube-square mr-1"></i>
+            Xem đầy đủ
+        </a>
+        
+        <a role="button" class="btn btn-outline-warning zoom" style="font-weight: bold" href="{{ url_for('download_video', youtube_id=video.id) }}">
+            <i class="fas fa-download mr-1"></i>
+            Tải xuống Video
+        </a>
+
+        <a role="button" class="btn btn-outline-info zoom" style="font-weight: bold" href="{{ url_for('download_audio', youtube_id=video.id) }}">
+            <i class="fas fa-download mr-1"></i>
+            Tải xuống Nhạc
+        </a>
+    </div>
+</div>

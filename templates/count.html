@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SSCoCa</title>
+    {% include 'elements/meta-data.html' %}
+</head>
+<body>
+    <div class="d-flex flex-column justify-content-between bg-image h-850px" style="padding-top: 150px">
+        {% include 'elements/navigation.html' %}
+        <div>
+            <h1 class="text-light font-logo text-center glow" style="font-size: 500%; margin-bottom: 60px">
+                Hello Daddy
+                <i class="fas fa-user-secret"></i>
+            </h1>
+            <div class="border border-dark rounded bg-main container text-center font-text py-4" style="width: 50%">
+                <h3 class="text-light font-logo text-center glow mb-4" style="font-size: 200%">
+                    Administrator's
+                    <i class="fas fa-cocktail"></i>
+                    SSCoCa
+                </h3>
+                <!-- Table -->
+                <div class="mt-5 text-info" style="width: 100%; height: 250px; overflow: auto">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">STT</th>
+                                <th scope="col">Thời gian</th>
+                                <th scope="col">Lượt Tải</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for count in all_count %}
+                            <tr>
+                                <th scope="row">{{ loop.index }}</th>
+                                <td>{{ count.time.hour }}:{{ count.time.minute }} | {{ count.time.day }}.{{ count.time.month }}.{{ count.time.year }}</td>
+                                <td>{{ count.amount }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <a role="button" class="btn btn-outline-warning zoom mt-4" href="{{ url_for('daddy') }}">
+                    <i class="fas fa-arrow-circle-left"></i>
+                    Trở về
+                </a>
+            </div>
+        </div>
+        {% include 'elements/copyright.html' %}
+    </div>
+    <script>
+        function myFunction() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar");
+            // Add the "show" class to DIV
+            x.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+        function myFunction1() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar1");
+            // Add the "show" class to DIV
+            x.className = "show";
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+</html>
