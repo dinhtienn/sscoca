@@ -11,7 +11,7 @@ import re
 
 app = Flask(__name__)
 app.secret_key = "sscoca"
-mlab.connect('sscoca-ytdl')
+mlab.connect()
 
 @app.route('/', methods=['GET','POST'])
 def index():

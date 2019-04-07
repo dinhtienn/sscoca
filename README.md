@@ -5,15 +5,15 @@
 * This repository is raw code version of Project that I keep private
 
 * Technology:
-    * First Release
+    * First Release:
         * Program language: Python
         * Frontend Framework: Bootstrap
         * Database: noSQL (MongoDB - Mlab)
-    * Now: 
+    * Latest Release: 
         * Frontend Framework: Nope
         * Youtube API for Searching 
         * New Ux/Ui
 
-* Deploying latest version at Heroku: [KoKa](https://kokka.herokuapp.com/)
+* Deployed at Heroku: [SSCoCa](https://sscoca.herokuapp.com/)
 
 * Design by me 12/2018
