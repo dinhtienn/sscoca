@@ -14,6 +14,6 @@
         * Youtube API for Searching 
         * New Ux/Ui
 
-* Deployed at Heroku: [SSCoCa](https://sscoca.herokuapp.com/)
+* Deployed at Heroku: [SSCoCa](https://ssscoca.herokuapp.com/)
 
 * Design by me 12/2018

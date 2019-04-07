@@ -1,2 +1,2 @@
 # Procfile
-web: python app.py
+web: python flask run
